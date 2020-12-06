@@ -6,7 +6,7 @@ def main():
     with open('input.p1', 'r') as f:
         input_data = [int(x) for x in f]
 
-    # find x * y == 2020
+    # find x + y == 2020
 
     while input_data:
         current_x = input_data.pop()
