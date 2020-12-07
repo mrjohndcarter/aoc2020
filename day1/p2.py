@@ -17,7 +17,7 @@ def main():
             result_tuple = find_x_y_for_sum(input_data, current_yzsum)
 
         if result_tuple:
-            print(f'{current_x} + {result_tuple[0]} + {result_tuple[1]} == 2020; {current_x} * {result_tuple[0]} * {result_tuple[1]} = {current_x} * {result_tuple[0] * result_tuple[1]}')
+            print(f'{current_x} + {result_tuple[0]} + {result_tuple[1]} == 2020; {current_x} * {result_tuple[0]} * {result_tuple[1]} = {current_x * result_tuple[0] * result_tuple[1]}')
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
