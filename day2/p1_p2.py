@@ -13,13 +13,21 @@ def parse_line(line) -> dict:
     }
 
 
+def valid_password_p2(password) -> bool:
+    return (password['string'][password['min'] - 1] == password['char']) ^ (
+            password['string'][password['max'] - 1] == password['char'])
+
+
 def main():
     with open('input.p1', 'r') as f:
         input_data = [parse_line(r) for r in f]
 
     valid_passwords = [p for p in input_data if (p['min'] <= p['string'].count(p['char']) <= p['max'])]
 
-    print(len(valid_passwords))
+    valid_passwords_p2 = list(filter(valid_password_p2, input_data))
+
+    print(f'p1 valid passwords: {len(valid_passwords)}')
+    print(f'p2 valid passwords: {len(valid_passwords_p2)}')
 
 
 if __name__ == '__main__':
